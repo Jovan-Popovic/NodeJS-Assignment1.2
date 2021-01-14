@@ -83,7 +83,7 @@ const scrapeApartments = async () => {
   }
   console.log(apartmentsData);
   const csv = converter.json2csv(apartmentsData, (err, csv) =>
-    err ? console.log("Lol nope: ", err) : writeStream.write(csv)
+    err ? console.log("Error occured: ", err) : writeStream.write(csv)
   );
   return csv;
 };
